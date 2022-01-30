@@ -23,6 +23,7 @@
       if ('serviceWorker' in navigator) {
         addEventListener('load', async () => {
           let sw = await navigator.serviceWorker.register('./sw.js');
+          sw.showNotification('Notifiaction working', {});
           console.log(sw);
         });
       }
